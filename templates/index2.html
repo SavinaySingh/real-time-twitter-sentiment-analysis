@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        .percentage{
+    width: 155px;
+    text-align: center;
+}
+.container{
+    width:300px;
+    height:300px;
+
+}
+
+.gauge{
+    position:relative;
+    width:150px;
+    height:150px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    border-bottom: 10px dashed #fff;
+
+}
+
+.pointer{
+    position: relative;
+    top: 8%;
+    left:47%;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 70px solid ;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    transform-origin: center bottom;
+    transform: rotate(-125deg);
+}
+
+.gauge:hover .pointerAnimation{
+    transform: rotate(75deg);
+    border-bottom-color: darkred;
+}
+
+.autoAnimation{
+    animation: rotation 1000ms 1s forwards;
+    -webkit-animation: rotation 1000ms 1s forwards;
+}
+    </style>
+</head>
+<body>
+
+<h1>{{result['positive'}}</h1>
+
+
+
+<!--<div class="contain" style="margin-left: 600px">-->
+ <!--<pre>            </pre>-->
+    <!--<h1 style="font-size: 50px" id="j">{{result['review']}}</h1>-->
+      <!--<h1 id="i" style="color: white">{{result['convert']}}</h1>-->
+        <!--<h1 class="title">Percentage</h1>-->
+        <!--<div class="container" style="">-->
+            <!--<div class="gauge">-->
+                <!--<div class="pointer animate autoAnimation"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+<!--</div>-->
+<!--<script>-->
+
+    <!--// if(parseInt(document.getElementById("j").innerText)<0)-->
+
+
+
+    <!--A_DYNAMIC_VALUE=parseInt(document.getElementById("i").innerText)-->
+
+ <!--var style = document.createElement('style');-->
+            <!--style.type = 'text/css';-->
+            <!--var keyFrames = '\-->
+            <!--@keyframes rotation {\-->
+            <!--from {\-->
+            <!--transform: rotate(-125deg);\-->
+        <!--}\-->
+            <!--to{\-->
+            <!--transform: rotate(A_DYNAMIC_VALUE);\-->
+            <!--}\-->
+        <!--}\-->
+             <!--';-->
+            <!--style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, A_DYNAMIC_VALUE+"deg");-->
+            <!--document.getElementsByTagName('head')[0].appendChild(style);-->
+ <!--</script>-->
+
+</body>
+</html>
